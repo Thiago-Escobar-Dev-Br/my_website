@@ -14,4 +14,27 @@ main{
     width: 1024px;
     margin: 50px auto;
     padding: 20px;
+    background-color: #0a0f0a;
+    color: #33ff33;
+    font-family: "Fira Code", monospace;
+    text-shadow: 2px 2px 5px rgba(51, 255, 51, 0.4);
+}
+
+h1, h2{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+p{
+    margin-bottom: 20px;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+a{
+    color: #33ff33;
+    text-decoration: underline;
+    text-shadow: 2px 2px 2px rgba(51, 255, 51, 0.4);
 }
