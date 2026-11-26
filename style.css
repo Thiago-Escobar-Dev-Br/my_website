@@ -7,34 +7,99 @@ body{
     font-family: "Fira Sans Condensed", sans-serif;
     font-weight: 400;
     font-style: normal;
+    background-color: #0a0f0a;
 }
 
 main{
-    border: 1px solid #000;
+    border: 1px solid #33ff33;
     width: 1024px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #0a0f0a;
     color: #33ff33;
     font-family: "Fira Code", monospace;
     text-shadow: 2px 2px 5px rgba(51, 255, 51, 0.4);
 }
 
-h1, h2{
+/* Styling the images */
+
+figure {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+figure img {
+  display: block;
+  filter: grayscale(100%) contrast(1.4) brightness(0.9)
+          sepia(100%) hue-rotate(70deg) saturate(350%);
+  image-rendering: pixelated;
+}
+
+figure::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(0, 0, 0, 0.35) 3px
+  );
+  pointer-events: none;
+}
+
+.my_photo{
+    width: 125px;
+    height: auto;
+}
+
+/* Setting positions and margins */
+
+h1, h2, p{
     margin-bottom: 20px;
+}
+
+h1{
+    margin-top: -10px;
+}
+
+h2{
     margin-top: 10px;
 }
 
-p{
-    margin-bottom: 20px;
+.final_paragraph{
+    margin-bottom: 0px;
 }
 
 ul {
   list-style-position: inside;
 }
 
+/* Styling links */
+
 a{
     color: #33ff33;
     text-decoration: underline;
     text-shadow: 2px 2px 2px rgba(51, 255, 51, 0.4);
+}
+
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Cursor Effect */
+
+.welcome_text::after {
+  content: "█"; /* Troque por "_" se preferir o cursor underline clássico do DOS */
+  content: "|";
+  margin-left: 0px;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
 }
